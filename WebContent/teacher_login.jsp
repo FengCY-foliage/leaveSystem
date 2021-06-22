@@ -17,7 +17,7 @@
 		<div class="logo margin-big-left fadein-top">
 			<h1>
 				<img src="images/logo.jpg" class="radius-circle rotate-hover"
-					height="50" alt="" />请假信息管理系统
+					height="50" alt="" />学生请假管理系统
 			</h1>
 		</div>
 		<div class="head-l">

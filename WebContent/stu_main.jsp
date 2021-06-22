@@ -23,6 +23,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-  	<p style="font-size:19px">欢迎来到学生请假信息管理系统！</p>
+  	<p style="font-size:19px">欢迎来到学生请假管理系统！</p>
   </body>
 </html>
