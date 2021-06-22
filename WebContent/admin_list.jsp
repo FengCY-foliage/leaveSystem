@@ -1,0 +1,61 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8" import="java.util.*" import="fcy.leave.bean.*" import="fcy.leave.Dao.*"%>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>管理员信息列表</title>
+<link rel="stylesheet" href="css/pintuer.css">
+<link rel="stylesheet" href="css/admin.css">
+<link rel="shortcut icon" href="images/logo.jpg">
+<script src="js/jquery.js"></script>
+<script src="js/pintuer.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+<div class="panel admin-panel">
+			<div class="panel-head">
+				<strong class="icon-reorder"> 管理员列表</strong>
+			</div>
+			<div class="padding border-bottom">
+				<ul class="search" style="padding-left:10px;">
+					<li><a class="button border-main icon-plus-square-o"
+						href="adminAdd.jsp"> 录入管理员信息</a></li>
+				</ul>
+			</div>
+			<table class="table table-hover text-center">
+				<tr>
+					<th>管理员姓名</th>
+					<th>管理员编号</th>
+					<th>管理员密码</th>
+				</tr>
+
+				<%--读取信息记录 --%>
+				
+				<tr>
+				 
+					<% ArrayList<loginBean> list= peopleListDao.findAdmin(); %>
+					<% for(int i = 0;i<list.size();i++) {
+						out.println("<tr>");
+						out.println("<td>"+list.get(i).getName()+"</td>");
+						out.println("<td>"+list.get(i).getUsername()+"</td>");
+						out.println("<td>"+list.get(i).getPassword()+"</td>");
+						out.println("</tr>");
+					} %>
+					
+					<td>
+					
+			</table>
+		</div>
+</body>
+<script type="text/javascript">
+$("[name='keywords']").each(function(){
+var n = $(this).attr("search");
+if(n.indexOf(name) == -1 )
+{
+$(this).hide();//隐藏不存在关键字的列表
+}
+});
+</script>
+</html>
