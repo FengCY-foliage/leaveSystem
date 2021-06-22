@@ -47,7 +47,8 @@ public class loginServlet extends HttpServlet {
 				}
 				res.getWriter().println("登录成功");
 			}else{
-				res.getWriter().println("用户名或密码错误");
+				res.getWriter().println("<script>alert('用户名或密码错误');</script>");
+				res.setHeader("refresh", "0;url=http://localhost:8080/leaveSystem/login.jsp");
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
