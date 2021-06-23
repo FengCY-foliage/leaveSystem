@@ -10,7 +10,7 @@ public class JDBCUtils {
 	public static Connection getConn()throws Exception{
 	    Connection conn=null;
 	   try{
-	         String db_url="jdbc:mysql://127.0.0.1:3306/leave?characterEncoding=utf8&useSSL=false";
+	         String db_url="jdbc:mysql://localhost:3306/leave?characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true";
 			   String db_user="root";
 			   String db_pwd="root";
 			   Class.forName("com.mysql.jdbc.Driver");
